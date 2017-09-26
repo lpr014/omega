@@ -1,0 +1,23 @@
+git init
+	initialize current folder for use with git
+git remote add origin https://github.com/lpr014/omega.git 
+	add the repo
+
+
+git pull 
+	this to fast forward to current (git pull+git merge)
+
+
+git status
+	check to see if you are up to date
+git fetch
+	grab everything
+git merge origin/master
+	combine that with your current stuff
+
+git add <newfile>
+	add newfile to the repe
+git commit -m "<message>"
+	commit with a message
+git push --set-upstream origin master
+	add it to github
