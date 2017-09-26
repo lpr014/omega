@@ -4,7 +4,7 @@ git remote add origin https://github.com/lpr014/omega.git
 	add the repo
 
 
-git pull 
+git pull origin master
 	this to fast forward to current (git pull+git merge)
 
 
