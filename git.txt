@@ -1,23 +1,23 @@
 git init
-	initialize current folder for use with git
+	#initialize current folder for use with git
 git remote add origin https://github.com/lpr014/omega.git 
-	add the repo
+	#add the repo
 
 
 git pull origin master
-	this to fast forward to current (git pull+git merge)
+	#this to fast forward to current (git pull+git merge)
 
 
 git status
-	check to see if you are up to date
+	#check to see if you are up to date
 git fetch
-	grab everything
+	#grab everything
 git merge origin/master
-	combine that with your current stuff
+	#combine that with your current stuff (one time)
 
 git add <newfile>
-	add newfile to the repe
+	#add newfile to the repe
 git commit -m "<message>"
-	commit with a message
+	#commit with a message
 git push --set-upstream origin master
-	add it to github
+	#add it to github--'git push' should work too'
