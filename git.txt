@@ -28,5 +28,5 @@ git add <newfile>
 git commit -m "<message>"
 	#commit with a message
 
-git push --set-upstream origin master
+git push origin master
 	#add it to github--('git push' should work too)
