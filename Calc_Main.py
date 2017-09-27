@@ -6,21 +6,25 @@
 
 
 #Main Program
-
+from * import Github
 
 print('Welcome to Calculator! \n')
 
-
-num1=raw_input('Please enter your first number:')
-if(num1.isdigit()==False): #error case: test if num1 is digit
-    print("INVALID INPUT")
+while True:
+    cont = True
+    while cont == True:
+        num1=raw_input('Please enter your first number:')
+        if(num1.isdigit()==False): #error case: test if num1 is digit
+            print("INVALID INPUT")
+            break
     
     
-op=raw_input('Please enter the operation symbol you wish to perform:')
-#error case
+        op=raw_input('Please enter the operation symbol you wish to perform:')
+        #error case
 
-num2=raw_input('Please enter your second number:')
-if(num2.isdigit()==False): #error case: test if num2 is digit
-    print("INVALID INPUT")
+        num2=raw_input('Please enter your second number:')
+        if(num2.isdigit()==False): #error case: test if num2 is digit
+            print("INVALID INPUT")
+            break
 
-print('CALCULATING....')
+        print('CALCULATING.... \n')
