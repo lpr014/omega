@@ -6,7 +6,7 @@
 
 
 #Main Program
-#from * import Github
+from user import *
 
 print('Welcome to Calculator! \n')
 
