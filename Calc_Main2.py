@@ -9,6 +9,9 @@
 from Mult import *
 from InputParser import *
 from Add import *
+#the .pyc files are created because we are importing them into the main
+#simply ignore them, dont bother adding them to github.
+
 
 print('Welcome to Calculator!')
 
