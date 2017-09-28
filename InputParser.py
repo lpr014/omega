@@ -5,7 +5,7 @@ def inputParser():
 	for char in string:
 		if not char.isdigit():
 			if char.isalpha():
-				return -1
+				return "invalid input"
 			inString+=[word]
 			word=""
 			inString+=[char]
