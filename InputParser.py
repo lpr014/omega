@@ -3,13 +3,18 @@ def inputParser():
 	inString=[]
 	string=raw_input('input: ')
 	for char in string:
-		if not char.isdigit():
+		if char.isdigit() or char==".":
+			word+=char
+		elif char.isdigit()==False:
 			if char.isalpha():
 				return "invalid input"
-			inString+=[word]
+			try:
+				inString+=[float(word)]
+			except:
+				return "invalid input"
 			word=""
 			inString+=[char]
-		else:
-			word+=char
-	inString+=[word]
-	return(inString)
+	try:
+		inString+=[float(word)]
+	except:
+		return "invalid input"
