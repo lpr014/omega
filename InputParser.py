@@ -1,7 +1,7 @@
 def inputParser():
     word=""
     inString=[]
-    string=raw_input('\ninput: ')
+    string=raw_input('\ninput: ').strip()
     for char in string:
         if char.isdigit() or char==".":
             word+=char
