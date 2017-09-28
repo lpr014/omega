@@ -1,9 +1,9 @@
 def inputParser():
-    word=""
+    word=''
     inString=[]
     string=raw_input('\ninput: ').strip()
     for char in string:
-        if char.isdigit() or char==".":
+        if char.isdigit() or char=='.':
             word+=char
         elif char.isdigit()==False:
             if char.isalpha():
