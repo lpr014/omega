@@ -1,6 +1,6 @@
 #Group:
 #
-#Last_Edit: Sept. 26 3:15
+#Last_Edit: Sept. 28 1:10 PM by Lorantz
 #
 #Calc_Main.py
 
@@ -20,7 +20,10 @@ while True:
     
     
         op=raw_input('Please enter the operation symbol you wish to perform:').strip()
-        #error case
+        #error case added by Lorantz
+        if(op != '*'and op != '/'and op != '+' and op != '-'):
+            print("You must enter a mathematical operation symbol")
+            break
 
         num2=raw_input('Please enter your second number:').strip()
         if(num2.isdigit()==False): #error case: test if num2 is digit
