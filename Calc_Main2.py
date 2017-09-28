@@ -21,9 +21,9 @@ while True:
         args=len(arr)
         
         if args==1:
-            print ("\n\t"+str(arr[0]))
+            print ('\n\t'+str(arr[0]))
             break
-        if arr=="invalid input": 
+        if arr=='invalid input': 
             print("\n\t"+arr)
             break
         if args>=2:
@@ -35,16 +35,16 @@ while True:
         print('\nCalculating...\n')
 
         #decide op ( + - * / ^ !)
-        if op == "*":
+        if op == '*':
             ans=multiply(num1, num2)
         
-        elif op == "!":
+        elif op == '!':
             ans=fact(num1)
         
-        elif op == "^":
+        elif op == '^':
             ans=power(num1, num2)
             
-        elif op== "+":
+        elif op== '+':
             ans=add(num1, num2)
 
         print '\tANSWER: ', ans
