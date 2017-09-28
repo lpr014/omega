@@ -43,6 +43,7 @@ while True:
         
         elif op == "^":
             ans=power(num1, num2)
+            
         elif op== "+":
             ans=add(num1, num2)
 
