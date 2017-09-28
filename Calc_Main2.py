@@ -9,6 +9,9 @@
 from Mult import *
 from InputParser import *
 from Add import *
+#the .pyc files are created because we are importing them into the main
+#simply ignore them, dont bother adding them to github.
+
 
 print('Welcome to Calculator!')
 
@@ -16,40 +19,38 @@ while True:
     while True:
         #parse the users input
         ans = -1
-        arr = []
         arr = inputParser()
-        #num1, op, num2 = arr
         
-        if len(arr)==1 or arr=="invalid input": 
-            print(arr[1])
+        args=len(arr)
+        
+        if args==1:
+            print ('\n\t'+str(arr[0]))
             break
-        
-        if len(arr)>=2:
+        if arr=='invalid input': 
+            print("\n\t"+arr)
+            break
+        if args>=2:
+            num1=arr[0]
             op=arr[1]
-        #needed for fact op.
-        '''
-        if num2 == '':
-            num2 = '0'
-        '''
-        '''
-        if not num1.isdigit() or not num2.isdigit():
-            print("\nINVALID INPUT!\n")
-            break
-        '''
+        if args>=3:
+            num2=arr[2]
+
         print('\nCalculating...\n')
 
-
         #decide op ( + - * / ^ !)
-        if op == "*":
-            ans=multiply(int(num1), int(num2))
+        if op == '*':
+            ans=multiply(num1, num2)
         
-        elif op == "!":
-            ans=fact(int(num1))
+        elif op == '!':
+            ans=fact(num1)
         
-        elif op == "^":
-            ans=power(int(num1), int(num2))
+        elif op == '^':
+            ans=power(num1, num2)
+            
+        elif op== '+':
+            ans=add(num1, num2)
 
-        print 'ANSWER: ', ans
+        print '\tANSWER: ', ans
     
 
 '''
