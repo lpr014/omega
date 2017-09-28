@@ -16,9 +16,7 @@ while True:
     while True:
         #parse the users input
         ans = -1
-        arr = []
         arr = inputParser()
-        #num1, op, num2 = arr
         
         args=len(arr)
         
@@ -35,7 +33,6 @@ while True:
             num2=arr[2]
 
         print('\nCalculating...\n')
-
 
         #decide op ( + - * / ^ !)
         if op == "*":
