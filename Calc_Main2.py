@@ -19,11 +19,15 @@ while True:
         arr = []
         arr = inputParser()
         #num1, op, num2 = arr
-        args=len(arr)
-        if args==1 or arr=="invalid input": 
-            print(arr)
-            break
         
+        args=len(arr)
+        
+        if args==1:
+            print ("\n\t"+str(arr[0]))
+            break
+        if arr=="invalid input": 
+            print("\n\t"+arr)
+            break
         if args>=2:
             num1=arr[0]
             op=arr[1]
@@ -42,8 +46,10 @@ while True:
         
         elif op == "^":
             ans=power(num1, num2)
+        elif op== "+":
+            ans=add(num1, num2)
 
-        print 'ANSWER: ', ans
+        print '\tANSWER: ', ans
     
 
 '''
