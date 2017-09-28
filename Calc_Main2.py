@@ -14,38 +14,39 @@ print('Welcome to Calculator!')
 
 while True:
     while True:
-	    #parse the users input
-	    ans = -1
-	    arr = []
-	    arr = inputParser()
-	    #num1, op, num2 = arr
-	    if arr=="invalid input":
-			print(arr)
-			break
-						
-	    #needed for fact op.
-	    if num2 == '':
-		    num2 = '0'
-	    '''
-	    if not num1.isdigit() or not num2.isdigit():
-		    print("\nINVALID INPUT!\n")
-		    break
-	    '''
-	    print('\nCalculating...\n')
+        #parse the users input
+        ans = -1
+        arr = []
+        arr = inputParser()
+        #num1, op, num2 = arr
+        if len(arr)>=2:
+            op=arr[1]
+        if arr=="invalid input": 
+            break
+            
+        #needed for fact op.
+        if num2 == '':
+            num2 = '0'
+        '''
+        if not num1.isdigit() or not num2.isdigit():
+            print("\nINVALID INPUT!\n")
+            break
+        '''
+        print('\nCalculating...\n')
 
 
-	    #decide op ( + - * / ^ !)
-	    if op == "*":
-		    ans=multiply(int(num1), int(num2))
-	    
-	    elif op == "!":
-	    	ans=fact(int(num1))
-	    
-	    elif op == "^":
-	    	ans=power(int(num1), int(num2))
+        #decide op ( + - * / ^ !)
+        if op == "*":
+            ans=multiply(int(num1), int(num2))
+        
+        elif op == "!":
+            ans=fact(int(num1))
+        
+        elif op == "^":
+            ans=power(int(num1), int(num2))
 
-	    print 'ANSWER: ', ans
-	
+        print 'ANSWER: ', ans
+    
 
 '''
         num1=raw_input('Please enter your first number:').strip()
