@@ -19,14 +19,18 @@ while True:
         arr = []
         arr = inputParser()
         #num1, op, num2 = arr
+        
+        if len(arr)==1 or arr=="invalid input": 
+            print(arr[1])
+            break
+        
         if len(arr)>=2:
             op=arr[1]
-        if arr=="invalid input": 
-            break
-            
         #needed for fact op.
+        '''
         if num2 == '':
             num2 = '0'
+        '''
         '''
         if not num1.isdigit() or not num2.isdigit():
             print("\nINVALID INPUT!\n")
