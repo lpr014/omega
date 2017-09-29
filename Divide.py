@@ -18,6 +18,11 @@ def mod(num1, num2):
     else:
         ans=num1%num2
         return ans
-
-
-
+# used for integer division with the "//" symbol
+def whole(num1, num2):
+    if num2==0:
+        print("CANNOT DIVIDE BY ZERO")
+        return
+    else:
+        ans=num1//num2
+        return ans
