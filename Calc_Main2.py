@@ -60,7 +60,7 @@ while True:
         elif op == '+':
             ans=add(num1, num2) 
 
-	elif op == '/':
-		ans=divide(num1, num2)
+        elif op == '/':
+            ans=divide(num1, num2)
 
         print '\tANSWER: ', ans
