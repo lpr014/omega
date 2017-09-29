@@ -7,9 +7,11 @@ def inputParser():
             word+=char
         elif char.isdigit()==False:
             if char.isalpha():
-                return('invalid input')
+                return('invalid input character')
             try:
-                inString+=[float(word)]
+                print(word)
+                if word.isdigit():
+                    inString+=[float(word)]
             except:
                 return('invalid input')
             word=''
@@ -18,4 +20,10 @@ def inputParser():
         inString+=[float(word)]
     except:
         None #None for fact to work
+    for i in range(len(inString)-2):
+        if inString[i]=='/' and inString[i+1]=='/':
+            inString[i]='//'
+            inString[i+1]='//'
+            inString=inString[:i]+inString[i+1:]
+        
     return(inString)
