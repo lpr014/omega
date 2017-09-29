@@ -22,7 +22,7 @@ while True:
         ans = -1
         arr = inputParser()
        	
-	print arr 
+	#print arr 
         
 	args=len(arr)
         #testing
@@ -40,7 +40,8 @@ while True:
         if args >= 2:
             num1=arr[0]
             op=arr[1]
-
+            if(op != '*'and op != '/'and op != '+' and op != '-'):
+                break
         if args >= 3:
             num2=arr[2]
 
