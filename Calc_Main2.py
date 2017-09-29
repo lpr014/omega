@@ -62,5 +62,7 @@ while True:
 
         elif op == '/':
             ans=divide(num1, num2)
-
+        
+        elif op =='//':
+            ans=whole(num1, num2)
         print '\tANSWER: ', ans
