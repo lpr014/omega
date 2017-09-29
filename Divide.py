@@ -25,5 +25,4 @@ def whole(num1, num2):
         return
     else:
         ans=num1//num2
-        #return ans
-        print(ans)
+        return ans
