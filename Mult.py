@@ -18,8 +18,8 @@ def power(num1, num2):
     ans=1
     for i in range(num2):
         ans = ans * num1
-    return ans
-
+    #return ans
+    print(ans)
 def fact(num1):
     if num1 == 0:
         return 1
@@ -31,4 +31,5 @@ def fact(num1):
         ans = ans * num1
         num1 = num1 - 1
     return ans
-
+        
+power(2,5)
