@@ -1,0 +1,21 @@
+these are MUST DO's for the project. BE SURE THESE ARE DONE!
+
+-Must have no less than 25 user stories
+
+-Play "planning poker" with the user stories 
+(amounts to use are: 0, 1/2, 1, 2, 3, 5, 8, 13, 20, 40, 100, infinity, '?')
+
+-When we get Jira, transfer user stories and data (points) to Jira
+
+-Create acceptance criteria for each user story and write these in Jira
+
+-Create a new sprint and select which ones to include in the sprint
+
+-------------------------------------------------------------------------------
+
+-MUST use test-driven development and must use an automated test framework to create and run your
+tests. Use the acceptance criteria to design your tests
+
+-Create a public GitHub project and link all of your local Git repos containing 
+the project code and the unit tests to this GitHub repo so you can push your 
+commits to it.
