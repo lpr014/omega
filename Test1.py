@@ -1,5 +1,7 @@
-## from _____ import _____ ##
-import unittest
+## from _____ import the class ##
+
+
+from unittest import TestCase
 
 class CalculatorTest(unittest.TestCase):
     
