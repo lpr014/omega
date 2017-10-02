@@ -1,4 +1,5 @@
 ## from _____ import _____ ##
+import unittest
 
 class CalculatorTest(unittest.TestCase):
     
@@ -8,12 +9,14 @@ class CalculatorTest(unittest.TestCase):
     
     def test_add(self):
         self.assertEqual(self.calc.add(0,9), 9)
-        pass
 
     def test_multiply(self):
         self.assertEqual(self.calc.multiply(2,3), 6)
-        pass
 
     def test_divide(self):
         self.assertEqual(self.calc.divide(9,3), 3)
-        pass      
+              
+
+
+    if __name__ == '__main__':
+    main()    
