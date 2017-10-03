@@ -7,10 +7,11 @@ def multiply(num1, num2):
 
 #power
 def power(num1, num2):
+    ans=1
+        
     if num2 == 0:
         return 1
 
-    ans=1
     for i in range(int(num2)):
         ans = ans * num1
     return ans

@@ -26,3 +26,4 @@ def inputParser():
             inString[i+1]='//'
             inString=inString[:i]+inString[i+1:]
     return(inString)
+inputParser()
