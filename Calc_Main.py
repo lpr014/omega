@@ -29,6 +29,10 @@ while True:
 	num1=0
 	num2=0
 	#testing#
+	
+	if args==0:
+	    break
+	    	    
         if args==1:
             print ('\n\t'+str(arr[0]))
             break
