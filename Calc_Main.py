@@ -12,6 +12,7 @@ from InputParser import *
 from Add import *
 from Divide import *
 from SquareRoot import *
+from Subtract import *
 #the .pyc files are created because we are importing them into the main
 #simply ignore them, dont bother adding them to github.
 
@@ -92,6 +93,10 @@ while True:
 	
 	elif op == '%':
 	    ans=mod(num1, num2)
+	    history.write(str(ans)+'\n')
+	
+	elif op == '-':
+	    ans=subtract(num1, num2)
 	    history.write(str(ans)+'\n')
 	
 	elif op == 'sqrt':
