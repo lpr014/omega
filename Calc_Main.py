@@ -40,7 +40,7 @@ while True:
         if args >= 2:
             num1=arr[0]
             op=arr[1]
-            if(op != '*'and op != '/'and op != '+' and op != '-' and op != '!' and op != '//' and op !="^"):
+            if(op != '*'and op != '/'and op != '+' and op != '-' and op != '!' and op != '//' and op !="^" and op !='%'):
                 break
         if args >= 3:
             num2=arr[2]
@@ -60,9 +60,13 @@ while True:
         elif op == '+':
             ans=add(num1, num2) 
 
-        elif op == '/':
+        elif op == '/': 
             ans=divide(num1, num2)
         
-        elif op =='//':
+        elif op == '//': #int Division
             ans=whole(num1, num2)
+	
+	elif op == '%':
+	    ans=mod(num1, num2)
+
         print '\tANSWER: ', ans
