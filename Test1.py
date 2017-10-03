@@ -11,6 +11,10 @@ class CalculatorTest(unittest.TestCase):
     
     def test_add(self):
         self.assertEqual(add(0,9), 9)
+    
+    def test_sub(self):
+        self.assertEqual(sub(5,2), 3)
+
 
     
                   
