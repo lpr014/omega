@@ -1,15 +1,17 @@
 import unittest
-from Add import add
-from Subtract import subtract 
-from Subtract import subtract
-from Mult import multiply
-from Divide import divide
-
+from Add import *
+from Subtract import *
+from Mult import *
+from Divide import *
+import math
 
 class CalculatorTest(unittest.TestCase):
     
     def test_add(self):
-        self.assertEqual(add(0,9), 9)
+        for i in range(-9999,9999,100):
+            for j in range(-9999,9999,100):
+                self.assertEqual(add(i,j), i+j)
+        self.assertEqual(add(0,0),0)
     
     def test_sub(self):
         self.assertEqual(subtract(5,2), 3)
@@ -20,6 +22,9 @@ class CalculatorTest(unittest.TestCase):
     def test_divide(self):
         self.assertEqual(divide(9,3), 3)
     
+    def test_factorial(self):
+        for i in range(0,99,100):
+            self.assertEqual(fact(i),math.factorial(i))
                   
    
 
