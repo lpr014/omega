@@ -41,4 +41,3 @@ def inputParser():
                 inString=inString[:i]+inString[i+1:]
             
     return(inString)
-print(inputParser())
