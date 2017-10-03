@@ -15,7 +15,8 @@ class CalculatorTest(unittest.TestCase):
     def test_sub(self):
         self.assertEqual(sub(5,2), 3)
 
-
+    def test_divide(self):
+        self.assertEqual(divide(9,3), 3)
     
                   
    
