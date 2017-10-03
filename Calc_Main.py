@@ -11,18 +11,19 @@ from Mult import *
 from InputParser import *
 from Add import *
 from Divide import *
+from SquareRoot import *
 #the .pyc files are created because we are importing them into the main
 #simply ignore them, dont bother adding them to github.
 
 
 print('Welcome to Calculator!')
 #History.txt code here
-if os.path.exists('history.txt'):
-    history=open('history.txt','r+')
+if os.path.exists('.history'):
+    history=open('.history','r+')
 else:
-    history=open('history.txt','w')
+    history=open('.history','w')
     history.close()
-    history=open('history.txt','r+')
+    history=open('.history','r+')
 
 
 while True:
@@ -38,10 +39,9 @@ while True:
 	num1=0
 	num2=0
 	#testing#
+
 	
-	if args==0:
-	    break
-	    	    
+	
         if args==1:
             print ('\n\t'+str(arr[0]))
             break
@@ -51,15 +51,20 @@ while True:
             break
 
         if args >= 2:
-            num1=arr[0]
-            op=arr[1]
-            if(op != '*'and op != '/'and op != '+' and op != '-' and op != '!' and op != '//' and op !="^" and op !='%'):
+	    if arr[0] == 'sqrt(': #test for sqrt
+	    	op='sqrt'
+		num1=arr[1]
+		
+	    else:
+                num1=arr[0]
+                op=arr[1]
+
+            if(op != '*'and op != '/'and op != '+' and op != '-' and op != '!' and op != '//' and op !="^" and op !='%' and op !='sqrt'):
                 break
         if args >= 3:
             num2=arr[2]
 
         print('\nCalculating...\n')
-
         #decide op ( + - * / ^ !)
         if op == '*':
             ans=multiply(num1, num2)
@@ -88,8 +93,10 @@ while True:
 	elif op == '%':
 	    ans=mod(num1, num2)
 	    history.write(str(ans)+'\n')
+	
+	elif op == 'sqrt':
+	    ans=squareroot(num1)
+	    history.write(str(ans)+'\n') 
 
         print '\tANSWER: ', ans
     
-    if args==0:
-        break

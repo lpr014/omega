@@ -1,4 +1,4 @@
 from math import *
   
-def sqrt(n):
-   return sqrt(n)
+def squareroot(n):
+    return sqrt(n)
