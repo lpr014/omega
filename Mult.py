@@ -18,6 +18,8 @@ def power(num1, num2):
 
 #factorial
 def fact(num1):
+    if num1<0:
+        return "invalid input"
     if num1 == 0:
         return 1
     
