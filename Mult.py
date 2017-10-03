@@ -32,4 +32,4 @@ def fact(num1):
     for i in range(num1):
         ans = ans * num1
         num1 = num1 - 1
-    return float(ans)
+    return float(ans) 
