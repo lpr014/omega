@@ -1,6 +1,6 @@
 import unittest
 from Add import add
-from Subtract import sub 
+from Subtract import subtract
 from Mult import multiply
 from Divide import divide
 
