@@ -12,7 +12,7 @@ def inputParser():
             word+=char
         elif char.isdigit()==False:
             if char.isalpha():
-                return('invalid input character')
+                return('invalid input')
             try:
                 if word.isdigit():
                     inString+=[float(word)]
