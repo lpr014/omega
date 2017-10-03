@@ -2,6 +2,10 @@ def inputParser():
     word=''
     inString=[]
     string=raw_input('\ninput: ').strip()
+    
+    if string[:5]=='sqrt(':
+        return ['sqrt(',float(string[5:-1]),')']
+    
     for char in string:
         if char.isdigit() or char=='.':
             word+=char
@@ -36,3 +40,4 @@ def inputParser():
                 inString=inString[:i]+inString[i+1:]
             
     return(inString)
+print(inputParser())
