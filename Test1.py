@@ -2,7 +2,7 @@ import unittest
 from Add import add
 from Subtract import sub 
 from Mult import multiply
-
+from Divide import divide
 
 
 class CalculatorTest(unittest.TestCase):
