@@ -1,6 +1,6 @@
 import unittest
 from Add import add
-from Subtract import sub 
+from Subtract import subtract 
 from Mult import multiply
 from Divide import divide
 
@@ -11,7 +11,7 @@ class CalculatorTest(unittest.TestCase):
         self.assertEqual(add(0,9), 9)
     
     def test_sub(self):
-        self.assertEqual(sub(5,2), 3)
+        self.assertEqual(subtract(5,2), 3)
 
     def test_multiply(self):
         self.assertEqual(multiply(2,3), 6)
