@@ -1,28 +1,27 @@
-## from _____ import the class ##
-
-
 import unittest
+from Add import add
+from Subtract import sub 
 from Mult import multiply
+from Divide import divide
+
 
 class CalculatorTest(unittest.TestCase):
     def test_multiply(self):
         self.assertEqual(multiply(2,3), 6)
-    ''' 
-        def setUp(self):
-            self.calc = src.calculator.Calculator()
-        
-        def test_add(self):
-            self.assertEqual(self.calc.add(0,9), 9)
-    '''
     
-    '''
-        def test_divide(self):
-            self.assertEqual(self.calc.divide(9,3), 3)
+    def test_add(self):
+        self.assertEqual(add(0,9), 9)
+
+    def test_sub(self):
+        self.assertEqual(add(5,2), 3)
+
+    def test_divide(self):
+        self.assertEqual(divide(9,3), 3)
                   
-    '''
+   
 
 if __name__ == '__main__':
     unittest.main()    
 
 
-#https://jeffknupp.com/blog/2013/12/09/improve-your-python-understanding-unit-testing/
+
