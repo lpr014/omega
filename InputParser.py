@@ -2,7 +2,8 @@ def inputParser():
     word=''
     inString=[]
     string=raw_input('\ninput: ').strip()
-    
+    if len(string)==0:
+        exit()
     if string[:5]=='sqrt(':
         return ['sqrt(',float(string[5:-1]),')']
     
@@ -40,3 +41,4 @@ def inputParser():
                 inString=inString[:i]+inString[i+1:]
             
     return(inString)
+print(inputParser())
