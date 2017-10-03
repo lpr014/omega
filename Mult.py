@@ -7,16 +7,22 @@ def multiply(num1, num2):
 
 #power
 def power(num1, num2):
+    ans=1
+    if num2<0:
+        for i in range(int(-num2)):
+            ans = ans * num1
+        return 1/ans
     if num2 == 0:
         return 1
 
-    ans=1
     for i in range(int(num2)):
         ans = ans * num1
     return ans
 
 #factorial
 def fact(num1):
+    if num1<0:
+        return "invalid input"
     if num1 == 0:
         return 1
     
