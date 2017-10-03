@@ -27,5 +27,9 @@ if __name__ == '__main__':
     unittest.main()    
 
 
+<<<<<<< HEAD
 
 #https://jeffknupp.com/blog/2013/12/09/improve-your-python-understanding-unit-testing/
+=======
+#https://jeffknupp.com/blog/2013/12/09/improve-your-python-understanding-unit-testing/
+>>>>>>> c1f878bc77ed5232f06f244a8ebd03d6b1f4f642
