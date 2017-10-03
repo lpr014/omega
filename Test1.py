@@ -3,7 +3,7 @@ from Add import *
 from Subtract import *
 from Mult import *
 from Divide import *
-import math
+
 
 class CalculatorTest(unittest.TestCase):
     
