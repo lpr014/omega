@@ -3,7 +3,7 @@ from Add import *
 from Subtract import *
 from Mult import *
 from Divide import *
-
+import math
 
 class CalculatorTest(unittest.TestCase):
     
@@ -22,6 +22,9 @@ class CalculatorTest(unittest.TestCase):
     def test_divide(self):
         self.assertEqual(divide(9,3), 3)
     
+    def test_factorial(self):
+        for i in range(0,99,100):
+            self.assertEqual(fact(i),math.factorial(i))
                   
    
 
