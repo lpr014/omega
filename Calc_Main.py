@@ -6,6 +6,7 @@
 
 
 #Main Program
+import os
 from Mult import *
 from InputParser import *
 from Add import *
@@ -15,6 +16,14 @@ from Divide import *
 
 
 print('Welcome to Calculator!')
+#History.txt code here
+if os.path.exists('history.txt'):
+    history=open('history.txt','r+')
+else:
+    history=open('history.txt','w')
+    history.close()
+    history=open('history.txt','r+')
+
 
 while True:
     while True:
@@ -54,23 +63,33 @@ while True:
         #decide op ( + - * / ^ !)
         if op == '*':
             ans=multiply(num1, num2)
+	    history.write(str(ans)+'\n')
         
         elif op == '!':
             ans=fact(int(num1))
+	    history.write(str(ans)+'\n')
         
         elif op == '^':
             ans=power(num1, num2)
+	    history.write(str(ans)+'\n')
             
         elif op == '+':
             ans=add(num1, num2) 
+	    history.write(str(ans)+'\n')
 
         elif op == '/': 
             ans=divide(num1, num2)
+	    history.write(str(ans)+'\n')
         
         elif op == '//': #int Division
             ans=whole(num1, num2)
+	    history.write(str(ans)+'\n')
 	
 	elif op == '%':
 	    ans=mod(num1, num2)
+	    history.write(str(ans)+'\n')
 
         print '\tANSWER: ', ans
+    
+    if args==0:
+        break
