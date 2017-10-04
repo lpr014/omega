@@ -10,12 +10,12 @@ def inputParser():
     for char in string:
         if char.isdigit() or char=='.':
             word+=char
+            #print("decimal",char)
         elif char.isdigit()==False:
             if char.isalpha():
                 return('invalid input')
             try:
-                if word.isdigit():
-                    inString+=[float(word)]
+                inString+=[float(word)]
             except:
                 return('invalid input')
             word=''
@@ -39,5 +39,4 @@ def inputParser():
             if type(inString[i-1]) is str and type(inString[i+1]) is float:
                 inString[i+1]*=-1
                 inString=inString[:i]+inString[i+1:]
-            
     return(inString)
