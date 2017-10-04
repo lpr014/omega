@@ -33,13 +33,12 @@ while True:
         ans = -1
         arr = inputParser()
        	
-	#print arr 
-        
-	args=len(arr)
+	    #print arr 
+        args=len(arr)
         #testing
-	num1=0
-	num2=0
-	#testing#
+    	num1=0
+    	num2=0
+    	#testing#
 
 	
 	
@@ -60,8 +59,9 @@ while True:
                 num1=arr[0]
                 op=arr[1]
 
-            if(op != '*'and op != '/'and op != '+' and op != '-' and op != '!' and op != '//' and op !="^" and op !='%' and op !='sqrt'):
-                break
+        if(op != '*'and op != '/'and op != '+' and op != '-' and op != '!' and op != '//' and op !="^" and op !='%' and op !='sqrt'):
+            break
+        
         if args >= 3:
             num2=arr[2]
 
@@ -69,39 +69,34 @@ while True:
         #decide op ( + - * / ^ !)
         if op == '*':
             ans=multiply(num1, num2)
-	    history.write(str(ans)+'\n')
         
         elif op == '!':
             ans=fact(int(num1))
-	    history.write(str(ans)+'\n')
         
         elif op == '^':
             ans=power(num1, num2)
-	    history.write(str(ans)+'\n')
             
         elif op == '+':
             ans=add(num1, num2) 
-	    history.write(str(ans)+'\n')
 
         elif op == '/': 
             ans=divide(num1, num2)
-	    history.write(str(ans)+'\n')
         
         elif op == '//': #int Division
             ans=whole(num1, num2)
-	    history.write(str(ans)+'\n')
 	
-	elif op == '%':
-	    ans=mod(num1, num2)
-	    history.write(str(ans)+'\n')
+        elif op == '%':
+	        ans=mod(num1, num2)
 	
-	elif op == '-':
-	    ans=subtract(num1, num2)
-	    history.write(str(ans)+'\n')
+    	elif op == '-':
+    	    ans=subtract(num1, num2)
 	
-	elif op == 'sqrt':
-	    ans=squareroot(num1)
-	    history.write(str(ans)+'\n') 
+    	elif op == 'sqrt':
+	        ans=squareroot(num1)
 
         print '\tANSWER: ', ans
+	    
+        #Write ans to the history file
+        history.write(str(ans)+'\n') 
+
     

@@ -3,7 +3,7 @@
 #multiply
 def multiply(num1, num2):
     ans = num1 * num2
-    return ans
+    return float(ans)
 
 #power
 def power(num1, num2):
@@ -17,7 +17,7 @@ def power(num1, num2):
 
     for i in range(int(num2)):
         ans = ans * num1
-    return ans
+    return float(ans)
 
 #factorial
 def fact(num1):
