@@ -32,7 +32,22 @@ while True:
         #parse the users input
         ans = -1
         arr = inputParser()
-       	
+
+
+        #Testing
+        '''        
+        if arr=='history':
+            his=open('.history')
+            lines=his.readlines()
+            his.close()
+            lines
+            for i in range(0, len(lines)):
+                print lines[i]
+            break
+        '''
+        #Testing
+        
+               	
 	    #print arr 
         args=len(arr)
         #testing

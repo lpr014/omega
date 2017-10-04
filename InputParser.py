@@ -2,6 +2,11 @@ def inputParser():
     word=''
     inString=[]
     string=raw_input('\ninput: ').strip()
+    #TESTING
+    if string=='history':
+        return string
+    #TESTING
+
     if len(string)==0:
         exit()
     if string[:5]=='sqrt(':
