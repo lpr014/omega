@@ -17,7 +17,7 @@ def inputParser():
             try:
                 inString+=[float(word)]
             except:
-                return('invalid input')
+                pass
             word=''
             inString+=[char]
     try:
