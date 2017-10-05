@@ -1,4 +1,7 @@
+#Last edit by Lorantz 10/5/17 @ 1749
+
 import unittest
+import math
 from Add import *
 from Subtract import *
 from Mult import *
@@ -14,22 +17,40 @@ class CalculatorTest(unittest.TestCase):
         self.assertEqual(add(0,0),0)
     
     def test_sub(self):
-        self.assertEqual(subtract(5,2), 3)
+        for x in range(-9999,9999,100):
+            for i in range(-9999,9999,100):
+                self.assertEqual(subtract(x,i), x-i)
 
     def test_multiply(self):
-        self.assertEqual(multiply(2,3), 6)
+        for x in range(-9999,9999,50):
+            for y in range(-9999,9999,50):
+                self.assertEqual(multiply(x,y), x*y)
 
     def test_divide(self):
-        self.assertEqual(divide(9,3), 3)
+        for x in range(-9999,9999,50):
+            for y in range(-9999,9999,50):
+                self.assertEqual(divide(x,y), x/y)
     
+    def test_mod(self):
+        for x in range(-9999,9999,50):
+            for y in range(-9999,9999,50):
+                self.assertEqual(mod(x,y), x%y)
+
+    def test_intDivide(self):
+        for x in range (-9999,9999,50):
+            for y in range(-9999,9999,50):
+                self.assertEqual(whole(x,y), x//y)
+
+    def test_power(self):
+        for x in range(-9999,9999,1):
+            for y in range(-9999,9999,1):
+                self.assertEqual(power(x,y), x^y)
+
     def test_factorial(self):
         for i in range(0,99,100):
-            self.assertEqual(fact(i),math.factorial(i))
-                  
-   
-
+            self.assertEqual(fact(i), math.factorial(i))
+                     
 if __name__ == '__main__':
     unittest.main()    
-
 
 #https://jeffknupp.com/blog/2013/12/09/improve-your-python-understanding-unit-testing/
