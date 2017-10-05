@@ -10,7 +10,8 @@ def inputParser():
         return 0
 
     if string[:5]=='sqrt(':
-        return ['sqrt(',float(string[5:-1]),')']
+        inString=['sqrt(']
+        string=string[5:]
     
     for char in string:
         if char.isdigit() or char=='.':
