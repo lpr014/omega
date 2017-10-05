@@ -59,13 +59,7 @@ while True:
                	
 	    #print arr 
         args=len(arr)
-        #testing
-    	num1=0
-    	num2=0
-    	#testing#
 
-	
-	
         if args==1:
             print ('\n\t'+str(arr[0]))
             break
@@ -73,15 +67,37 @@ while True:
         if arr=='invalid input': 
             print("\n\t"+arr)
             break
-
+        
         if args >= 2:
-	    if arr[0] == 'sqrt(': #test for sqrt
-	    	op='sqrt'
-		num1=arr[1]
-		
-	    else:
+            if arr[0] == 'sqrt(': #test for sqrt
+                op = 'sqrt'
+                num1=arr[1]
+            else:
                 num1=arr[0]
                 op=arr[1]
+                 
+        #Use Prev. Ans
+        if(arr[0] == '*' or arr[0] == '/' or arr[0] == '+' or arr[0] == '-' or arr[0] == '//' or arr[0] == '^' or arr[0] == '%'):
+            op=arr[0]
+            num2=arr[1]
+            
+
+            history.close()
+            hist = open('.history','rb')
+
+            lines = hist.readlines()
+            last = len(lines)
+            if last==0:
+                print 'NO HISTORY'
+                break
+            
+            num1 = float(lines[last-1].strip())
+           
+            hist.close()
+            history = open('.history','r+b')
+            for line in history:
+                pass
+	    
 
         if(op != '*'and op != '/'and op != '+' and op != '-' and op != '!' and op != '//' and op !="^" and op !='%' and op !='sqrt'):
             break
