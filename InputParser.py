@@ -2,13 +2,13 @@ def inputParser():
     word=''
     inString=[]
     string=raw_input('\ninput: ').strip()
-    #TESTING
+    #Changed to fix History output
     if string=='history':
         return string
-    #TESTING
 
     if len(string)==0:
-        exit()
+        return 0
+
     if string[:5]=='sqrt(':
         return ['sqrt(',float(string[5:-1]),')']
     

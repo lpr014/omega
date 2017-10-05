@@ -18,13 +18,16 @@ from Subtract import *
 
 
 print('Welcome to Calculator!')
+
 #History.txt code here
 if os.path.exists('.history'):
-    history=open('.history','r+')
+    history=open('.history','r+b')
+    for line in history:
+        pass
 else:
-    history=open('.history','w')
+    history=open('.history','wb')
     history.close()
-    history=open('.history','r+')
+    history=open('.history','r+b')
 
 
 while True:
@@ -33,19 +36,25 @@ while True:
         ans = -1
         arr = inputParser()
 
+        if arr==0:
+            break
 
-        #Testing
-        '''        
+
+        #Print ANS history        
         if arr=='history':
-            his=open('.history')
-            lines=his.readlines()
-            his.close()
-            lines
+            history.close()
+            hist=open('.history','rb')
+            lines = hist.readlines()
+            
             for i in range(0, len(lines)):
                 print lines[i]
+
+            hist.close()
+            history=open('.history','r+b')
+            for line in history:
+                pass
             break
-        '''
-        #Testing
+        
         
                	
 	    #print arr 
@@ -112,6 +121,12 @@ while True:
         print '\tANSWER: ', ans
 	    
         #Write ans to the history file
-        history.write(str(ans)+'\n') 
+        history.write(str(ans)+'\n')
+
+    if arr==0:
+        break
+
+
+history.close() 
 
     
