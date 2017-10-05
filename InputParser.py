@@ -21,8 +21,6 @@ def inputParser():
                 return('invalid input')
             try:
                 inString+=[float(word)]
-                #add check for length of word and add a return('invalid input') to except
-                #test for errors like ++
             except:
                 pass
             word=''
@@ -46,4 +44,9 @@ def inputParser():
             if type(inString[i-1]) is str and type(inString[i+1]) is float:
                 inString[i+1]*=-1
                 inString=inString[:i]+inString[i+1:]
+    
+    for i in range(len(inString)-1):
+        if type(inString[i])!=float and type(inString[i+1])!=float:
+            return("invalid input")
+            
     return(inString)
