@@ -48,6 +48,6 @@ def inputParser():
     for i in range(len(inString)-1):
         if type(inString[i])!=float and type(inString[i+1])!=float:
             return("invalid input")
-    if len(inString)>2:
+    if len(inString)>3
         return("invalid input")        
     return(inString)
