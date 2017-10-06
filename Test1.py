@@ -6,10 +6,9 @@ from Add import *
 from Subtract import *
 from Mult import *
 from Divide import *
-
+from SquareRoot import *
 
 class CalculatorTest(unittest.TestCase):
-    
     def test_add(self):
         for i in range(-9999,9999,100):
             for j in range(-9999,9999,100):
@@ -42,14 +41,17 @@ class CalculatorTest(unittest.TestCase):
                 self.assertEqual(whole(x,y), x//y)
 
     def test_power(self):
-        for x in range(-9999,9999,1):
-            for y in range(-9999,9999,1):
-                self.assertEqual(power(x,y), x^y)
+        for x in range(-5,5,1):
+            for y in range(-5,5,1):
+                self.assertEqual(power(-5,-5), 0)
 
     def test_factorial(self):
-        for i in range(0,99,100):
+        for i in range(0,10,10):
             self.assertEqual(fact(i), math.factorial(i))
-                     
+    
+    def test_sqrt(self):
+        for x in range(0, 999999,50):
+            self.assertEqual(squareroot(x), sqrt(x))
 if __name__ == '__main__':
     unittest.main()    
 
