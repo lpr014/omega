@@ -89,6 +89,10 @@ while True:
             last = len(lines)
             if last==0:
                 print 'NO HISTORY'
+                hist.close()
+                history = open('.history', 'r+b')
+                for line in history:
+                    pass
                 break
             
             num1 = float(lines[last-1].strip())
