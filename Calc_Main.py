@@ -16,19 +16,20 @@ from Subtract import *
 #the .pyc files are created because we are importing them into the main
 #simply ignore them, dont bother adding them to github.
 
+def _history():
+    if os.path.exists('.history'):
+        history=open('.history','r+b')
+        for line in history:
+            pass
+        
+    else:
+        history=open('.history','wb')
+        history.close()
+        history=open('.history','r+b')
+    return history
 
-print('Welcome to Calculator!')
-
-#History.txt code here
-if os.path.exists('.history'):
-    history=open('.history','r+b')
-    for line in history:
-        pass
-else:
-    history=open('.history','wb')
-    history.close()
-    history=open('.history','r+b')
-
+history=_history()
+print('Welocome to Calculator!')
 
 while True:
     while True:
@@ -50,11 +51,7 @@ while True:
                 print lines[i]
 
             hist.close()
-            history=open('.history','r+b')
-            for line in history:
-                pass
-            break
-        
+            history=_history() 
         
                	
 	    #print arr 
@@ -90,18 +87,13 @@ while True:
             if last==0:
                 print 'NO HISTORY'
                 hist.close()
-                history = open('.history', 'r+b')
-                for line in history:
-                    pass
+                _history()
                 break
             
             num1 = float(lines[last-1].strip())
            
             hist.close()
-            history = open('.history','r+b')
-            for line in history:
-                pass
-	    
+            history=_history() 
 
         if(op != '*'and op != '/'and op != '+' and op != '-' and op != '!' and op != '//' and op !="^" and op !='%' and op !='sqrt'):
             break
@@ -146,7 +138,4 @@ while True:
     if arr==0:
         break
 
-
-history.close() 
-
-    
+history.close()
