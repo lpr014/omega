@@ -8,13 +8,20 @@ def multiply(num1, num2):
 #power
 def power(num1, num2):
     ans=1
+    
     if num2<0:
+        if num1==0:
+            return("invalid input")
         for i in range(int(-num2)):
             ans = ans * num1
-        return 1/ans
+        return 1.0/ans
+    
     if num2 == 0:
         return 1
-
+    
+    if num1==0:
+        return 0
+        
     for i in range(int(num2)):
         ans = ans * num1
     return float(ans)
