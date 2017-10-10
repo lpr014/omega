@@ -18,7 +18,7 @@ from Subtract import *
 
 def _history():
     if os.path.exists('.history'):
-        history=open('.history','r+b')
+        history=open('.history','r+b') 
         for line in history:
             pass
         
@@ -51,8 +51,12 @@ while True:
                 print lines[i]
 
             hist.close()
-            history=_history() 
+            history=_history()
         
+        if arr=='clear':
+            history.close()
+            os.remove('.history')
+            history=_history() 
                	
 	    #print arr 
         args=len(arr)
@@ -87,7 +91,7 @@ while True:
             if last==0:
                 print 'NO HISTORY'
                 hist.close()
-                _history()
+                history=_history()
                 break
             
             num1 = float(lines[last-1].strip())
