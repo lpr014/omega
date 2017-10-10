@@ -10,6 +10,9 @@ def inputParser():
         
     if inString=='history':
         return inString
+    if inString=='clear':
+        return inString
+
     if inString[:5]=='sqrt(':
         inArr=['sqrt(']
         inString=inString[5:]
