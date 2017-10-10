@@ -43,14 +43,17 @@ class CalculatorTest(unittest.TestCase):
     def test_power(self):
         for x in range(-5,5,1):
             for y in range(-5,5,1):
-                self.assertEqual(power(-5,-5), 0)
+                #print(x,y,-5**-5,power(-5,-5))
+                self.assertEqual(power(x,y), x**y)
 
     def test_factorial(self):
         for i in range(0,10,10):
+            pass
             self.assertEqual(fact(i), math.factorial(i))
     
     def test_sqrt(self):
         for x in range(0, 999999,50):
+            pass
             self.assertEqual(squareroot(x), sqrt(x))
 if __name__ == '__main__':
     unittest.main()    
