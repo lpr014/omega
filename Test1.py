@@ -42,19 +42,21 @@ class CalculatorTest(unittest.TestCase):
                 self.assertEqual(whole(x,y), x//y)
 
     def test_power(self):
-        for x in range(-5,5,1):
+        for x in range(-5,-1,1):
+            for y in range(-5,5,1):
+                #print(x,y,-5**-5,power(-5,-5))
+                self.assertEqual(power(x,y), x**y)
+        for x in range(1,5,1):
             for y in range(-5,5,1):
                 #print(x,y,-5**-5,power(-5,-5))
                 self.assertEqual(power(x,y), x**y)
 
     def test_factorial(self):
         for i in range(0,10,10):
-            pass
             self.assertEqual(fact(i), math.factorial(i))
     
     def test_sqrt(self):
         for x in range(0, 999999,50):
-            pass
             self.assertEqual(squareroot(x), sqrt(x))
     
     #def test_nroot(self):
