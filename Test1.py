@@ -54,7 +54,6 @@ class CalculatorTest(unittest.TestCase):
     
     def test_sqrt(self):
         for x in range(0, 999999,50):
-            pass
             self.assertEqual(squareroot(x), sqrt(x))
     
     #def test_nroot(self):
