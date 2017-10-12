@@ -16,7 +16,12 @@ def inputParser():
     if inString[:5]=='sqrt(':
         inArr=['sqrt(']
         inString=inString[5:]
-
+    
+    if inString.find('rt(')!=-1:
+        if inString.find('~')!=-1:
+            return('invalid input')
+        inString=inString.replace(')','')
+        inString=inString.replace('rt(', '~')
 
     inString=inString.replace('pi()',"3.141592653589793")
     inString=inString.replace('e()',"2.718281828459045")
@@ -64,3 +69,4 @@ def inputParser():
         
     #return array of inputs
     return(inArr)
+#print(inputParser())

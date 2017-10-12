@@ -13,6 +13,7 @@ from Add import *
 from Divide import *
 from SquareRoot import *
 from Subtract import *
+from Nth_root import *
 #the .pyc files are created because we are importing them into the main
 #simply ignore them, dont bother adding them to github.
 
@@ -81,7 +82,7 @@ while True:
                 op=arr[1]
                  
         #Use Prev. Ans
-        if(arr[0] == '*' or arr[0] == '/' or arr[0] == '+' or arr[0] == '-' or arr[0] == '//' or arr[0] == '^' or arr[0] == '%'):
+        if(arr[0] == '*' or arr[0] == '/' or arr[0] == '+' or arr[0] == '-' or arr[0] == '//' or arr[0] == '^' or arr[0] == '%' or arr[0]=='~'):
             op=arr[0]
             num2=arr[1]
             
@@ -102,12 +103,12 @@ while True:
             hist.close()
             history=_history() 
 
-        if(op != '*'and op != '/'and op != '+' and op != '-' and op != '!' and op != '//' and op !="^" and op !='%' and op !='sqrt' and op != 'nroot'):
+        if(op != '*'and op != '/'and op != '+' and op != '-' and op != '!' and op != '//' and op !="^" and op !='%' and op !='sqrt' and op != 'nroot' and op != '~'):
             break
         
         if args >= 3:
             num2=arr[2]
-
+        print(num1,op,num2)
         print('\nCalculating...\n')
         #decide op ( + - * / ^ !)
         if op == '*':
@@ -137,7 +138,7 @@ while True:
     	elif op == 'sqrt':
 	        ans=squareroot(num1)
 
-        elif op == 'nroot':
+        elif op == '~':
             ans=nth_root(num1,num2)
 
         print '\tANSWER: ', ans
