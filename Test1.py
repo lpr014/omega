@@ -42,7 +42,11 @@ class CalculatorTest(unittest.TestCase):
                 self.assertEqual(whole(x,y), x//y)
 
     def test_power(self):
-        for x in range(-5,5,1):
+        for x in range(-5,-1,1):
+            for y in range(-5,5,1):
+                #print(x,y,-5**-5,power(-5,-5))
+                self.assertEqual(power(x,y), x**y)
+        for x in range(1,5,1):
             for y in range(-5,5,1):
                 #print(x,y,-5**-5,power(-5,-5))
                 self.assertEqual(power(x,y), x**y)
