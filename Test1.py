@@ -53,7 +53,6 @@ class CalculatorTest(unittest.TestCase):
 
     def test_factorial(self):
         for i in range(0,10,10):
-            pass
             self.assertEqual(fact(i), math.factorial(i))
     
     def test_sqrt(self):
