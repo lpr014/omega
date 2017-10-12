@@ -7,6 +7,7 @@ from Subtract import *
 from Mult import *
 from Divide import *
 from SquareRoot import *
+from Nth_root import *
 
 class CalculatorTest(unittest.TestCase):
     def test_add(self):
@@ -55,6 +56,11 @@ class CalculatorTest(unittest.TestCase):
         for x in range(0, 999999,50):
             pass
             self.assertEqual(squareroot(x), sqrt(x))
+    
+    #def test_nroot(self):
+       # for x in range(0, 999999, 50):
+      #      for y in range(2, 999999, 10):
+      #          self.assertEqual()
 if __name__ == '__main__':
     unittest.main()    
 

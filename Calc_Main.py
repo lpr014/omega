@@ -73,6 +73,9 @@ while True:
             if arr[0] == 'sqrt(': #test for sqrt
                 op = 'sqrt'
                 num1=arr[1]
+            elif arr[0] == 'nroot(':
+                op = 'nroot'
+                num1=arr[2]
             else:
                 num1=arr[0]
                 op=arr[1]
@@ -99,7 +102,7 @@ while True:
             hist.close()
             history=_history() 
 
-        if(op != '*'and op != '/'and op != '+' and op != '-' and op != '!' and op != '//' and op !="^" and op !='%' and op !='sqrt'):
+        if(op != '*'and op != '/'and op != '+' and op != '-' and op != '!' and op != '//' and op !="^" and op !='%' and op !='sqrt' and op != 'nroot'):
             break
         
         if args >= 3:
@@ -133,6 +136,9 @@ while True:
 	
     	elif op == 'sqrt':
 	        ans=squareroot(num1)
+
+        elif op == 'nroot':
+            ans=nth_root(num1,num2)
 
         print '\tANSWER: ', ans
 	    
