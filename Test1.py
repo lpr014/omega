@@ -61,8 +61,9 @@ class CalculatorTest(unittest.TestCase):
     
     def test_nroot(self):
         for x in range(-5,5, 5):
-            for y in range(-5,5, 1):
-                self.assertEqual(nth_root(x,y),x**1.0/y)
+            for y in range(-5,-1, 1):
+                self.assertEqual(nth_root(x,y),-(x**(1.0/-y)))
+                #python cant use negative when fractional power
 if __name__ == '__main__':
     unittest.main()    
 
