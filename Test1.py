@@ -59,10 +59,10 @@ class CalculatorTest(unittest.TestCase):
         for x in range(0, 999999,50):
             self.assertEqual(squareroot(x), sqrt(x))
     
-    #def test_nroot(self):
-       # for x in range(0, 999999, 50):
-      #      for y in range(2, 999999, 10):
-      #          self.assertEqual()
+    def test_nroot(self):
+        for x in range(-5,5, 5):
+            for y in range(-5,5, 1):
+                self.assertEqual(nth_root(x,y),x**1.0/y)
 if __name__ == '__main__':
     unittest.main()    
 
