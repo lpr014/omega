@@ -38,7 +38,7 @@ Configuration
 Use
 ---
 
-* history: type 'history' to history from (FOREVER). Able to use last recorded answer in next equation (i.e. +5,-5,*5,/5)
+* history: type 'history' to view history from [FOREVER]. Able to use last recorded answer in next equation (i.e. +5,-5,*5,/5)
 
 * clear: type 'clear' to clear entire history
 
