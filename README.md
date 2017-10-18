@@ -27,7 +27,7 @@ Requirements
 Installation
 ------------
 
-* There is no installation process! Just run in the command line!
+* There is no installation process! Just run Calc_Main.py in the command line!
 
 
 Configuration
